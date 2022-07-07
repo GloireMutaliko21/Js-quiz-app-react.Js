@@ -1,0 +1,8 @@
+.container {
+    max-width: min-content;
+    min-width: 350px;
+    padding: 2em 1rem;
+    background: #FFFFFF;
+    border-radius: 0px;
+    text-align: center;
+}

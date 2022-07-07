@@ -1,8 +1,10 @@
 import React from "react";
-import { useState } from "react";
 
-function Accueil(props) {
-     return (
+function Accueil({ isBegin, setIsBegin }) {
+    if (!isBegin) {
+        return null
+    }
+    return (
         <div>
             <h2>JavaScript Quiz</h2>
             <p >
@@ -10,7 +12,9 @@ function Accueil(props) {
                 nous avons spécialement sélectionnées pour vous. <br />C'est fun et
                 c'est gratuit.
             </p>
-            <input type="submit" value="Commencer" onClick={()=>{}}/>
+            <input type="submit" value="Commencer" onClick={() => {
+                setIsBegin(!isBegin);
+            }} />
         </div>
     )
 

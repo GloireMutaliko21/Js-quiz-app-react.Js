@@ -1,11 +1,13 @@
 import React from 'react';
+import { useState } from "react";
 import Accueil from './Accueil';
 import '../styles/app.css'
 
-function App() {
+function App(props) {
+  const [isBegin, setIsBegin] = useState([])
   return (
     <div className='container'>
-      <Accueil />
+      <Accueil isBegin={isBegin} setIsBegin={setIsBegin}/>
     </div>
   )
 }

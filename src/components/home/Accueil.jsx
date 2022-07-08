@@ -1,4 +1,5 @@
 import React from "react";
+import Form from "./Form";
 
 function Accueil({ isBegin, setIsBegin }) {
     if (!isBegin) {
@@ -12,9 +13,7 @@ function Accueil({ isBegin, setIsBegin }) {
                 nous avons spécialement sélectionnées pour vous. <br />C'est fun et
                 c'est gratuit.
             </p>
-            <input type="submit" value="Commencer" onClick={() => {
-                setIsBegin(!isBegin);
-            }} />
+            <Form hundleSubmit={() => setIsBegin(!isBegin)} />
         </div>
     )
 

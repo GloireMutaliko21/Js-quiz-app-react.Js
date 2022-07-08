@@ -4,7 +4,7 @@ import Accueil from './home/Accueil';
 import '../styles/app.css'
 import Quiz from './quiz/Quiz';
 
-function App(props) {
+function App() {
   const [isBegin, setIsBegin] = useState([])
   return (
     <div className='container'>

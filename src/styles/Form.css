@@ -1,0 +1,24 @@
+.home-form {
+    margin: 0 2em;
+}
+
+.text-fields {
+    margin: 0.5em 0 1.5em;
+    height: 35px;
+    width: 100%;
+    border: 1px solid #bbb8b8;
+    padding: 0 10px;
+}
+
+.bouton {
+    height: 37px;
+    width: 180px;
+    border: none;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    background: #028A3D;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}

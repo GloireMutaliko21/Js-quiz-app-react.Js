@@ -60,7 +60,7 @@ function Form({ hundleSubmit }) {
                 type="submit"
                 onClick={(e) => {
                     e.preventDefault();
-                    isValidNom() && isValidMail() ? hundleSubmit() : isValidMail()
+                    isValidNom() && isValidMail() ? hundleSubmit() : null
                 }}
             />
         </form>

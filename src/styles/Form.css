@@ -3,11 +3,22 @@
 }
 
 .text-fields {
-    margin: 0.5em 0 1.5em;
+    margin: 10px 0px 0px 0px;
     height: 35px;
     width: 100%;
     border: 1px solid #bbb8b8;
     padding: 0 10px;
+}
+
+label {
+    display: flex;
+}
+
+span {
+    color: red;
+    font-size: 12px;
+    display: flex;
+    margin-bottom: 10px;
 }
 
 .bouton {

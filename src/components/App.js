@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from "react";
-import Accueil from './Accueil';
+import Accueil from './home/Accueil';
 import '../styles/app.css'
-import Quiz from './Quiz';
+import Quiz from './quiz/Quiz';
 
 function App(props) {
   const [isBegin, setIsBegin] = useState([])

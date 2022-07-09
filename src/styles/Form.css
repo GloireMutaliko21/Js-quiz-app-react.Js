@@ -14,7 +14,8 @@ label {
     display: flex;
 }
 
-span {
+#errorMail,
+#errorNom {
     color: red;
     font-size: 12px;
     display: flex;

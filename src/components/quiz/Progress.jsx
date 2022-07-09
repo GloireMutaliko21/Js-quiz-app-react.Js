@@ -28,13 +28,25 @@ class Progression extends React.Component {
         return (
             <div>
                 <div className="progress">
-                    <span className="progress-questions">Question 1/15</span>
+                    <span className="progress-questions">Question {this.props.idQuestion}/15</span>
                     <span id="progressTime">{this.state.sec}</span>
                 </div>
 
 
                 <div className="progress-bar">
-                    <div className="font-progress-bar"></div>
+                    <div
+                        className="font-progress-bar"
+                        style={
+                            {
+                                "width": this.state.sec * (100 / 60) + "%",
+                                "height": 8,
+                                "borderRadius": 3,
+                                "backgroundColor": "#028A3D",
+                                "transition": "all  0.2s ease-out"
+                            }
+                        }
+                    >
+                    </div>
                 </div>
             </div>
         );

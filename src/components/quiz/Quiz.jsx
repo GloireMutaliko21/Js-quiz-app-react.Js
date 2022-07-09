@@ -16,7 +16,7 @@ function Quiz({ isBegin, setIsBegin }) {
     return (
         <div>
             <Enonce idQuestion={idQuestion} />
-            <Progression />
+            <Progression idQuestion={idQuestion+1}/>
             <ul>
                 {assertions}
             </ul>

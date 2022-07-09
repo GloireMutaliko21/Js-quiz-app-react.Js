@@ -4,7 +4,6 @@ import Assertions from "./Assertions";
 import { useState } from "react";
 import Enonce from "./Enonce";
 import Progression from "./Progress";
-import Clock from "./Progress";
 
 function Quiz({ isBegin, setIsBegin }) {
     const [idQuestion, setIdQuestion] = useState(0)
@@ -17,6 +16,7 @@ function Quiz({ isBegin, setIsBegin }) {
     return (
         <div>
             <Enonce idQuestion={idQuestion} />
+            <Progression />
             <ul>
                 {assertions}
             </ul>

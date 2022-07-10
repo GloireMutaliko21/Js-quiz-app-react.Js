@@ -1,5 +1,4 @@
 import React from "react";
-import { questions } from "../../data/Questions";
 import '../../styles/assetions.css'
 
 function Assertions(props) {

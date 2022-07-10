@@ -5,6 +5,7 @@ function Accueil({ isBegin, setIsBegin }) {
     if (!isBegin) {
         return null
     }
+
     return (
         <div>
             <h2>JavaScript Quiz</h2>

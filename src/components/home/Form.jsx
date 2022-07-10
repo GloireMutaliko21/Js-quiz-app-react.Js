@@ -21,7 +21,7 @@ function Form({ hundleSubmit }) {
         const validMail = mailValue.trim().length
         const mailTest = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+")){2,}@((\[[0-9]\.[0-9]{2,}\.[0-9]{2,}\.[0-9]\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 
-        const erreurMail = validMail == 0 ?
+        const erreurMail = validMail === 0 ?
             'Renseignez votre mail' : mailTest.test(validMail) ?
                 '' : 'Mail ivalide'
         document.getElementById('errorMail').textContent = erreurMail
@@ -31,6 +31,7 @@ function Form({ hundleSubmit }) {
 
     return (
         <form className="home-form">
+
             <label>Nom</label>
             <input
                 className="text-fields"
@@ -43,6 +44,7 @@ function Form({ hundleSubmit }) {
                 }}
             />
             <span id="errorNom"></span>
+
             <label>E-mail</label>
             <input
                 className="text-fields"
@@ -54,6 +56,7 @@ function Form({ hundleSubmit }) {
                 }}
             /><br />
             <span id="errorMail"></span>
+
             <input
                 value="Commencer"
                 className="bouton"
@@ -63,8 +66,8 @@ function Form({ hundleSubmit }) {
                     isValidNom() && isValidMail() ? hundleSubmit() : null
                 }}
             />
-        </form>
 
+        </form>
     )
 }
 

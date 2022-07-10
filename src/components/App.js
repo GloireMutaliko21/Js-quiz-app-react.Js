@@ -6,10 +6,17 @@ import Quiz from './quiz/Quiz';
 
 function App() {
   const [isBegin, setIsBegin] = useState([])
+
   return (
     <div className='container'>
-      <Accueil isBegin={isBegin} setIsBegin={setIsBegin}/>
-      <Quiz isBegin={isBegin} setIsBegin={setIsBegin}/>
+      <Accueil
+        isBegin={isBegin}
+        setIsBegin={setIsBegin}
+      />
+      <Quiz
+        isBegin={isBegin}
+        setIsBegin={setIsBegin}
+      />
     </div>
   )
 }

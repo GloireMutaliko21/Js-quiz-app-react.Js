@@ -9,6 +9,7 @@ import '../../styles/progress.css';
 
 function Quiz({ isBegin, setIsBegin }) {
     const [idQuestion, setIdQuestion] = useState(0)
+    const [disable, setDisable] = useState(true)
 
     const { time, start, reset } = useTimer({
         endTime: -1,
@@ -17,6 +18,7 @@ function Quiz({ isBegin, setIsBegin }) {
         autostart: !isBegin,
         onTimeOver: () => {
             setIdQuestion(idQuestion + 1)
+            setDisable(true)
             reset()
             start()
         }
@@ -31,7 +33,10 @@ function Quiz({ isBegin, setIsBegin }) {
             <Assertions
                 key={`${assertion}-${idx}`}
                 value={assertion}
-
+                onChange={() => {
+                    setDisable(false)
+                }
+                }
             />
         );
 
@@ -48,12 +53,15 @@ function Quiz({ isBegin, setIsBegin }) {
             </ul>
 
             <input
+                disabled={disable}
                 className="bouton"
+                id="suivant"
                 type="submit"
                 value="Suivant"
                 onClick={() => {
                     // setIsBegin(!isBegin);
                     setIdQuestion(idQuestion + 1);
+                    setDisable(!disable)
                     reset();
                     start();
                 }}

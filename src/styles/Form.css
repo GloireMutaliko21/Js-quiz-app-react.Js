@@ -26,6 +26,8 @@ label {
     margin-bottom: 10px;
 }
 
+
+
 .bouton {
     height: 37px;
     width: 120px;
@@ -40,8 +42,14 @@ label {
     line-height: 24px;
 }
 
-.bouton:hover{
+.bouton:hover {
     cursor: pointer;
     background: transparent;
-    border: 1px solid  #05493e;
+    border: 1px solid #05493e;
+}
+
+.bouton:disabled {
+    cursor: not-allowed;
+    background-color: #9dc2ad;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }

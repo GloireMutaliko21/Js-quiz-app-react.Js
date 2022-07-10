@@ -6,7 +6,7 @@ function Assertions(props) {
         <div className="radio-bouton">
             <label>
                 <li>
-                    <input type="radio" id="choix1" name="choix" />
+                    <input type="radio" id="choix1" name="choix" onChange={props.onChange} />
                     <span>{props.value}</span>
                 </li>
             </label>

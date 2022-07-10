@@ -7,7 +7,11 @@
     height: 35px;
     width: 93%;
     border: 1px solid #bbb8b8;
+    border-radius: 10px;
     padding: 0 10px;
+    background: linear-gradient(90deg, #3a3838 0%, rgba(21, 41, 46, 0.85) 99.84%);
+    color: #fff;
+    font-size: medium;
 }
 
 label {
@@ -24,13 +28,14 @@ label {
 
 .bouton {
     height: 37px;
-    width: 180px;
+    width: 120px;
     border: none;
-    margin-bottom: 25px;
-    margin-top: 15px;
-    background: #028A3D;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    background: linear-gradient(90deg, #05493e 0%, rgba(3, 59, 124, 0.85) 99.84%);
+    border-radius: 10px;
     color: #FFFFFF;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 14px;
     line-height: 24px;
 }

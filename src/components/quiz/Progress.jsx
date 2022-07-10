@@ -19,7 +19,7 @@ function Progression({ sec, idQuestion }) {
                             "width": sec * (100 / 60) + "%",
                             "height": 8,
                             "borderRadius": 3,
-                            "backgroundColor": "#028A3D",
+                            "background": "linear-gradient(90deg, #05493e 0%, rgba(3, 59, 124, 0.85) 99.84%)",
                             "transition": "all  0.2s ease-out"
                         }
                     }

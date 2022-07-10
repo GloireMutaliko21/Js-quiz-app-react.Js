@@ -5,7 +5,8 @@ li{
 
 .radio-bouton label {
     height: max-content;
-    border: 1px solid #bbb8b8;
+    border: 1px solid #6e6d6d;
+    border-radius: 10px;
     margin: 20px 7px;
     padding: 5px;
     cursor: pointer;
@@ -17,7 +18,7 @@ input[type=radio] {
 }
 
 [type="radio"]:checked+span::before {
-    background: #028A3D;
+    background: linear-gradient(90deg, #5f6161 0%, rgba(253, 254, 255, 0.85) 99.84%);
 }
 
 [type="radio"]+span::before {

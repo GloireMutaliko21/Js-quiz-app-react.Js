@@ -11,7 +11,7 @@
     width: 95%;
     height: 8px;
     border-radius: 3px;
-    background-color: #DDDDDD;
+    background: linear-gradient(90deg, #3a3838 0%, rgba(21, 41, 46, 0.85) 99.84%);
 }
 
 #miniteur {

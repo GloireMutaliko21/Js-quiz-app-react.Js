@@ -14,9 +14,10 @@ body {
 
 body {
   display: flex;
-  background: linear-gradient(90deg, #85F6B8 0%, rgba(142, 217, 235, 0.85) 99.84%);
+  background: linear-gradient(90deg, #000000 0%, rgba(21, 41, 46, 0.85) 99.84%);
   background-blend-mode: darken;
   align-items: center;
   justify-content: center;
   align-content: center;
+  color: aliceblue;
 }

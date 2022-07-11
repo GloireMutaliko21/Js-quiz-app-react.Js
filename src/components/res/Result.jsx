@@ -1,6 +1,6 @@
 import React from "react";
 
-function Result({ isEnd, setIsEnd, setIsBegin, score, isBegin }) {
+function Result({ isEnd, setIsEnd, setIsBegin, score, setScore }) {
     if (isEnd) {
         return null
     }
@@ -13,6 +13,7 @@ function Result({ isEnd, setIsEnd, setIsBegin, score, isBegin }) {
                 () => {
                     // setIsBegin(!isBegin);
                     setIsEnd(!isEnd)
+                    setScore(0)
                 }
             } />
         </div>

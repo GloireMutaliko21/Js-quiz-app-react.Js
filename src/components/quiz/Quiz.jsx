@@ -7,12 +7,10 @@ import Enonce from "./Enonce";
 import Progression from "./Progress";
 import '../../styles/progress.css';
 
-function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd }) {
+function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd, score, setScore }) {
     const [idQuestion, setIdQuestion] = useState(0)
     const [disable, setDisable] = useState(true)
-    const [reponseUser, setReponseUser] = useState('')
-    const [score, setScore] = useState(0)
-
+    const [reponseUser, setReponseUser] = useState()
 
     const { time, start, reset } = useTimer({
         endTime: -1,
@@ -44,7 +42,9 @@ function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd }) {
                 onChange={() => {
                     setDisable(false)
                     setReponseUser(assertion);
-                    console.log(reponseUser);
+                    // console.log(assertion)
+                    // console.log(reponseUser)
+
                 }
                 }
             />
@@ -71,19 +71,21 @@ function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd }) {
                 onClick={() => {
                     // 
                     if (idQuestion < 14) {
-                        scoreIncrease()
                         setIdQuestion(idQuestion + 1);
-                        console.log(score)
-                        console.log(reponseUser)
                         reset();
                         start();
                     } else {
+                        // console.log(score)
+                        // console.log(reponseUser)
                         setIdQuestion(0)
                         reset()
                         setIsBegin(!isBegin)
                         setIsEnd(false)
                     }
+                    scoreIncrease()
                     setDisable(!disable)
+                    console.log(reponseUser === questions[idQuestion].reponse)
+                    console.log(score)
 
 
                 }}

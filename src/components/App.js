@@ -8,7 +8,7 @@ import Result from './res/Result';
 function App() {
   const [isBegin, setIsBegin] = useState([])
   const [isEnd, setIsEnd] = useState([])
-  const [idQuestion, setIdQuestion] = useState(0)
+  const [score, setScore] = useState(0)
 
   return (
     <div className='container'>
@@ -22,14 +22,16 @@ function App() {
         setIsBegin={setIsBegin}
         isEnd={isEnd}
         setIsEnd={setIsEnd}
-        idQuestion={idQuestion}
-        setIdQuestion={setIdQuestion}
+        score={score}
+        setScore={setScore}
       />
       <Result
         isBegin={isBegin}
         setIsBegin={setIsBegin}
         isEnd={isEnd}
         setIsEnd={setIsEnd}
+        score={score}
+        setScore={setScore}
       />
     </div>
   )

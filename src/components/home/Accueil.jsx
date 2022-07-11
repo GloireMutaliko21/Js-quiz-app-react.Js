@@ -1,8 +1,8 @@
 import React from "react";
 import Form from "./Form";
 
-function Accueil({ isBegin, setIsBegin }) {
-    if (!isBegin) {
+function Accueil({ isBegin, setIsBegin, isEnd }) {
+    if (!isBegin || !isEnd) {
         return null
     }
 

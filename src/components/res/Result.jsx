@@ -10,7 +10,7 @@ function Result({ isEnd, setIsEnd, score, setScore }) {
     return (
         <div id="resultat">
             <div>
-                <p>
+                <p id="userName">
                     {user.userName}
                 </p>
                 <p>

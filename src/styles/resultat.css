@@ -1,8 +1,3 @@
-/* #resultat {
-    justify-content: center;
-    text-align: center;
-} */
-
 #retour-accueil {
     height: 37px;
     width: 140px;
@@ -15,4 +10,10 @@
     color: #FFFFFF;
     font-weight: 600;
     font-size: 14px;
+}
+
+#userName{
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }

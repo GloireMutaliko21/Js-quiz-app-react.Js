@@ -4,7 +4,7 @@ import { questions } from "../../data/Questions";
 import Assertions from "./Assertions";
 import Enonce from "./Enonce";
 import Progression from "./Progress";
-import '../../styles/progress.css';
+import '../../styles/boutonsQuitter.css'
 
 function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd, score, setScore }) {
     const [idQuestion, setIdQuestion] = useState(0)
@@ -13,7 +13,7 @@ function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd, score, setScore }) {
 
     const { time, start, reset } = useTimer({
         endTime: -1,
-        initialTime: 3,
+        initialTime: 60,
         timerType: 'DECREMENTAL',
         autostart: !isBegin,
         onTimeOver: () => {
@@ -69,18 +69,32 @@ function Quiz({ isBegin, setIsBegin, isEnd, setIsEnd, score, setScore }) {
             <ul>
                 {assertions}
             </ul>
+            <div className="quitter-suivant">
+                <input
+                    type="submit"
+                    value="Quitter"
+                    id="quitter"
+                    onClick={() => {
+                        setIdQuestion(0)
+                        reset()
+                        setIsBegin(!isBegin)
+                        setIsEnd(false)
+                        scoreIncrease()
+                    }}
+                />
+                <input
+                    disabled={disable}
+                    className="bouton"
+                    id="suivant"
+                    type="submit"
+                    value="Suivant"
+                    onClick={() => {
+                        questionSuivante()
+                        setDisable(!disable)
+                    }}
+                />
+            </div>
 
-            <input
-                disabled={disable}
-                className="bouton"
-                id="suivant"
-                type="submit"
-                value="Suivant"
-                onClick={() => {
-                    questionSuivante()
-                    setDisable(!disable)
-                }}
-            />
         </div>
     )
 

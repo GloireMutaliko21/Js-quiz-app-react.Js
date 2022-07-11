@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import '../../styles/Form.css'
+import { user } from "../../data/User";
 
 function Form({ hundleSubmit }) {
     const [nameValue, setNameValue] = useState("")
@@ -13,7 +14,12 @@ function Form({ hundleSubmit }) {
             validName < 2 ?
                 'Entrer un nom valide' : null
         document.getElementById('errorNom').textContent = erreurNom
-        return validName >= 2 ? true : false
+        if (validName >= 2) {
+            user.userName = nameValue
+            return true
+        }
+        return false
+        // validName >= 2 ?  (user.userName = nameValue) (return true) : false
 
     }
 
@@ -25,7 +31,11 @@ function Form({ hundleSubmit }) {
             'Renseignez votre mail' : mailTest.test(validMail) ?
                 '' : 'Mail ivalide'
         document.getElementById('errorMail').textContent = erreurMail
-        return mailTest.test(mailValue) ? true : false
+        if (mailTest.test(mailValue)) {
+            user.userMail = mailValue
+            return true
+        }
+        return false
 
     }
 

@@ -13,7 +13,7 @@ function Quiz({ isBegin, setIsBegin, setIsEnd, score, setScore }) {
     const [disable, setDisable] = useState(true)
     const [reponseUser, setReponseUser] = useState()
 
-    // Ceci est le miniteur : La réponse doit être fournie dans 60 secondes
+    // Ceci est le miniteur avec la librairie useTimer qu'il faut installer : La réponse doit être fournie dans 60 secondes
     const { time, start, reset } = useTimer({
         endTime: -1,
         initialTime: 60,

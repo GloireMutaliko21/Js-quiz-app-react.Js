@@ -3,12 +3,16 @@ import { user } from "../../data/User";
 import '../../styles/resultat.css'
 
 function Result({ isEnd, setIsEnd, score, setScore }) {
+
+    // Cette conndition vérifie si le quiz est terminé pour pouvoir afficher le résultat
+    // Il est à l'envers comme pour d'autres composants
     if (isEnd) {
         return null
     }
 
     return (
         <div id="resultat">
+            {/* Ici nous affichons les infos de l'utilisateur telles qu'enregistrées au login */}
             <div>
                 <p id="userName">
                     {user.userName}
@@ -18,6 +22,7 @@ function Result({ isEnd, setIsEnd, score, setScore }) {
                 </p>
             </div>
             <div>
+                {/* Ici nous testons le niveau du score pour afficher un svg soit de réussite ou d'échec */}
                 {
                     score > 7 ?
                         <span>
@@ -41,8 +46,13 @@ function Result({ isEnd, setIsEnd, score, setScore }) {
                         </span>
                 }
             </div>
+
+            {/* Là nous affichons le résultat de l'utilisateur sur un total de 15 */}
             <div> {score}/15 </div>
 
+            {/* Le bouton de retour à l'accueil qui change l'état de fin de jeu : à l'envers
+                Il réinitialise aussi le score à 0
+             */}
             <input
                 value="Accueil"
                 id="retour-accueil"

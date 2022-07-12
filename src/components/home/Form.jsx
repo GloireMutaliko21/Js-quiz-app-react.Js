@@ -4,9 +4,11 @@ import '../../styles/Form.css'
 import { user } from "../../data/User";
 
 function Form({ hundleSubmit }) {
+    // Les états propres au formulaire
     const [nameValue, setNameValue] = useState("")
     const [mailValue, setMalilValue] = useState("")
 
+    // Cette fonctioin vérifie la validité du username fourni par l'utilisateur
     function isValidNom() {
         const validName = nameValue.trim().length
         const erreurNom = validName === 0 ?
@@ -14,15 +16,19 @@ function Form({ hundleSubmit }) {
             validName < 2 ?
                 'Entrer un nom valide' : null
         document.getElementById('errorNom').textContent = erreurNom
+
+        /* Cette condition permet de conserver le username quand il est valide 
+         pour pouvoir l'afficher à la page de résutat 
+         Nous retournons également true/false selon que ce username est valide ou non*/
         if (validName >= 2) {
             user.userName = nameValue
             return true
         }
         return false
-        // validName >= 2 ?  (user.userName = nameValue) (return true) : false
 
     }
 
+    // Cette fonction vérifie la validité d'une adresse mail à partir des expressions régulières
     function isValidMail() {
         const validMail = mailValue.trim().length
         const mailTest = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+")){2,}@((\[[0-9]\.[0-9]{2,}\.[0-9]{2,}\.[0-9]\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -31,6 +37,10 @@ function Form({ hundleSubmit }) {
             'Renseignez votre mail' : mailTest.test(validMail) ?
                 '' : 'Mail ivalide'
         document.getElementById('errorMail').textContent = erreurMail
+
+        /* Cette condition permet de conserver le mail quand il est valide 
+         pour pouvoir l'afficher à la page de résutat 
+         Nous retournons également true/false selon que ce mail est valide ou non*/
         if (mailTest.test(mailValue)) {
             user.userMail = mailValue
             return true

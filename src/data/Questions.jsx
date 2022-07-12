@@ -1,3 +1,6 @@
+// Notre base de données de question. C'est un tableau d'objets
+// Chaque question est un objet avec son enoncé, ses assertions et la réponse correcte
+
 export const questions = [
     {
         enonce: "Dans quel balise HTML plaçons-nous le code JavaScript ?",

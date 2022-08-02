@@ -80,9 +80,9 @@ function Form({ hundleSubmit }) {
             <input
                 value="Commencer"
                 className="bouton"
-                type="submit"
+                type="button"
                 onClick={(e) => {
-                    e.preventDefault();
+                    // e.preventDefault();
                     isValidNom() && isValidMail() ? hundleSubmit() : null
                 }}
             />

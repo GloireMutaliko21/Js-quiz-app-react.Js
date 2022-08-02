@@ -33,8 +33,9 @@ function Quiz({ isBegin, setIsBegin, setIsEnd, score, setScore }) {
 
     // Cette fonction permet d'incrémenter le score de l'utilisateur quand sa réponse est bonne
     function scoreIncrease() {
-        reponseUser === questions[idQuestion].reponse ?
-            setScore(score + 1) : null
+        if (reponseUser === questions[idQuestion].reponse) {
+            setScore(score + 1)
+        }
     }
 
     /* Cette fonction permet de passer d'une question à la suivante

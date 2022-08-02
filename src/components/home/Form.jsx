@@ -49,6 +49,12 @@ function Form({ hundleSubmit }) {
 
     }
 
+    function validInfos() {
+        if (isValidNom() && isValidMail()) {
+            hundleSubmit()
+        }
+    }
+
     return (
         <form className="home-form">
 
@@ -82,8 +88,7 @@ function Form({ hundleSubmit }) {
                 className="bouton"
                 type="button"
                 onClick={(e) => {
-                    // e.preventDefault();
-                    isValidNom() && isValidMail() ? hundleSubmit() : null
+                    validInfos()
                 }}
             />
 
